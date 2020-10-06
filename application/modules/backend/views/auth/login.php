@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Masuk Pemetaan Nasabah FIF</title>
+    <title>Masuk OpenSikil</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="<?= asset('vendor/theme/img/icon.ico')?>" type="image/x-icon"/>
 
