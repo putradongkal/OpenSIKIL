@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = TRUE;
 
 $route['login'] = 'backend/authentication/login';
 $route['logout'] = 'backend/authentication/logout';
+$route['login/redirect'] = 'backend/authentication/redirect';
 $route['administrator/(:any)'] = 'backend/$1';
 $route['administrator/(:any)/(:any)'] = 'backend/$1/$2';
 $route['administrator/(:any)/(:any)/(:any)'] = 'backend/$1/$2/$3';

@@ -143,7 +143,7 @@ class Auth
             "loginStatus" => true
         ));
 
-        return redirect(base_url());
+        return redirect(base_url('login/redirect'));
     }
 
     /**
@@ -365,7 +365,7 @@ class Auth
             return true;
 
 //        return redirect('exceptions/custom_404', 'refresh');
-        return $this->CI->load->view('my/errors/403');
+        return $this->CI->load->view('errors/403');
     }
 
     /**
