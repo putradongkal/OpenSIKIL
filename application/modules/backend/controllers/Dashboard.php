@@ -221,53 +221,5 @@ class Dashboard extends CI_Controller{
         return false;
     }
 
-    private function updateValidate($id = null)
-    {
-        $this->form_validation->set_rules('name', 'Nama', 'required',
-            ['required' => '%s tidak boleh kosong.']
-        );
-
-        $this->form_validation->set_rules('username', 'Username', 'required|is_self_unique[users.username.'.$id.']',
-            ['required' => '%s tidak boleh kosong.',
-                'is_unique' => '%s sudah digunakan.']
-        );
-
-        $this->form_validation->set_rules('email', 'Email', 'required|is_self_unique[users.email.'.$id.']|min_length[3]|max_length[50]',
-            ['required' => '%s tidak boleh kosong.',
-                'is_unique' => '%s sudah digunakan.',
-                'min_length' => '%s minimal 3 karakter',
-                'max_length' => '%s maksimal 50 karakter']
-        );
-
-        $this->form_validation->set_rules('phone_number', 'Nomor handphone', 'required|is_self_unique[users.phone_number.'.$id.']|min_length[5]|max_length[15]',
-            ['required' => '%s tidak boleh kosong.',
-                'is_unique' => '%s sudah digunakan.',
-                'min_length' => '%s minimal 5 digit',
-                'max_length' => '%s maksimal 15 digit']
-        );
-
-
-        if($this->input->post('password')) {
-            $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]',
-                ['required' => '%s tidak boleh kosong.',
-                    'min_length' => '%s minimal 6 karakter']
-            );
-
-            $this->form_validation->set_rules('password_confirmation', 'Konfirmasi Password', 'required|matches[password]|min_length[6]',
-                ['required' => '%s tidak boleh kosong.',
-                    'matches' => '%s tidak sesuai',
-                    'min_length' => '%s minimal 6 karakter']
-            );
-        }
-
-        $this->form_validation->set_rules('role_id', 'Hak Akses', 'required',
-            ['required' => '%s tidak boleh kosong.']
-        );
-
-        if ($this->form_validation->run() == TRUE){
-            return true;
-        }
-
-        return false;
-    }
+   
 }
