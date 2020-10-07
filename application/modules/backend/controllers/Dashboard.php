@@ -15,5 +15,11 @@ public function index()
 }
 
 
+public function show()
+{
+    echo "hallo word";
+}
+
+
 
 }
