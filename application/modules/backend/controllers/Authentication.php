@@ -8,7 +8,7 @@ class Authentication extends CI_Controller
         parent::__construct();
         $this->load->library('auth');
         $this->load->helper('auth');
-        $this->auth->except(['logout', 'login', 'index']);
+        $this->auth->except(['logout', 'login', 'index', 'redirect']);
     }
 
     public function index()
@@ -19,6 +19,14 @@ class Authentication extends CI_Controller
         }
 
         redirect(base_url('login'));
+    }
+
+    public function redirect()
+    {
+        if(hasRole('administrator'))
+        {
+            redirect(admin('home'));
+        }
     }
 
     public function login()

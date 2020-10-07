@@ -9,3 +9,8 @@ function uploads($url)
 {
     return base_url('uploads/'. $url);
 }
+
+function admin($url)
+{
+    return base_url('administrator/'. $url);
+}
